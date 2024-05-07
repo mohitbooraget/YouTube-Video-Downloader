@@ -30,7 +30,7 @@ bot = Client("bot",
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"Hi 👋 Sir ! How are You?\n\n☞ I'm a High Speed **Txt File** Downloader Bot.\n\n☞ I can Download **Videos & Pdf** From Your **TXT** File.\n\n**𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :** 𝗛𝗘𝗠𝗨\n")
+    editable = await m.reply_text(f"𝙷𝚒! 𝐈❜𝐦 𝐓𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 \n\n 𝙶𝚒𝚟𝚎 𝐇𝐢𝐝𝐝𝐞𝐧 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚛𝚘𝚖 𝚊 𝚃𝚎𝚡𝚝 𝚏𝚒𝚕𝚎.🎓✨\n\n**𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :** 𝐌𝐞𝐧𝐝𝐚𝐱™❤️\n")
   
 
 @bot.on_message(filters.command("stop"))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["hemu"]))
+@bot.on_message(filters.command(["b"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Now Send Me Your **txt** File & Follow Bot Instructions**")
     input: Message = await bot.listen(editable.chat.id)
@@ -108,7 +108,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name**\n**Ex : ** 𝗛𝗘𝗠𝗨")
+    await editable.edit("**Enter Your Name**\n**Ex : **𝐌𝐞𝐧𝐝𝐚𝐱™❤️")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -117,7 +117,7 @@ async def account_login(bot: Client, m: Message):
     else:
         CR = raw_text3
 
-    await editable.edit("Now Send Your **Thumb url**\nEg : `https://telegra.ph/file/7b060bedc493fa9be744f.jpg`\n\nOr Send **no**")
+    await editable.edit("Now Send Your **Thumb url**\nEg : `https://graph.org/file/f4d4a6e3ed00365fed281.jpg`\n\nOr Send **no**")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -167,7 +167,7 @@ async def account_login(bot: Client, m: Message):
                   url = response.json()['url']
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{str(count).zfill(3)}) {CR} {name1[:60]}'
+            name = f'{str(count).zfill(3)}) 𝙼𝚎𝚗𝚍𝚊𝚡 {name1[:60]}'
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
@@ -180,8 +180,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'[ 🎬 ] **Vid ID : **{str(count).zfill(3)}\n**Video Title :** {name1}({res}) 『 𝗛𝗘𝗠𝗨 』.mp4\n**Batch Name :** {b_name}\n\n**Extracted By ➤** {CR}'
-                cc1 = f'[ 📕 ] **Pdf ID : **{str(count).zfill(3)}\n**File Title :** {name1} 『 𝗛𝗘𝗠𝗨 』.pdf\n**Batch Name :**{b_name}\n\n**Extracted By ➤** {CR}'
+                cc = f'**{str(count).zfill(3)}.  {name1}({res}) 『𝙼𝚎𝚗𝚍𝚊𝚡』.mp4\n**Batch Name :** {b_name}\n\n**Extracted By ➤** {CR}'
+                cc1 = f'**{str(count).zfill(3)}. {name1} 『𝙼𝚎𝚗𝚍𝚊𝚡』.pdf\n**Batch Name :**{b_name}\n\n**Extracted By ➤** {CR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -225,7 +225,7 @@ async def account_login(bot: Client, m: Message):
     await m.reply_text("Done ✅")
 @bot.on_message(filters.command(["vpdf"]))
 async def vision_pdf(bot: Client, m: Message):
-    editable = await m.reply_text("Hi 👋 Sir!\n\nHow are You ?\n\n☞ I'm **Vision Pdf** Downloader Bot.\n\n☞ Send ' /vpdf ' Command to Download **Vision IAS** Pdf.\n\n☞ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 : 𝗛𝗘𝗠𝗨\n")
+    editable = await m.reply_text("Hi 👋 Sir!\n\nHow are You ?\n\n☞ I'm **Vision Pdf** Downloader Bot.\n\n☞ Send ' /vpdf ' Command to Download **Vision IAS** Pdf.\n\n☞ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 : 𝐌𝐞𝐧𝐝𝐚𝐱™❤️\n")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -266,7 +266,7 @@ async def vision_pdf(bot: Client, m: Message):
             url = links[i][1]
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/","").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").strip()[:57]
             name = f'{str(count).zfill(3)}) {name1}'
-            cc = f'{str(count).zfill(3)}. {name1}.pdf\n\n**Batch:-** {raw_texty}\n\n**Extracted By ➤** 𝗛𝗘𝗠𝗨 '
+            cc = f'{str(count).zfill(3)}. {name1}.pdf\n\n**Batch:-** {raw_texty}\n\n**Extracted By ➤** 𝐌𝐞𝐧𝐝𝐚𝐱™❤️ '
             ka = await helper.vision(url, name, cookies)
             await m.reply_document(ka, caption=cc)
             count += 1
