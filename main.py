@@ -28,7 +28,7 @@ bot = Client("bot",
              api_hash= "38464da16c80310cabc8d13952419cf3"
 )
 
-@bot.on_message(filters.command(["start"]))
+@bot.on_message(filters.command(["istart"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"𝙷𝚒! 𝐈❜𝐦 𝐓𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 \n\n 𝙶𝚒𝚟𝚎 𝐇𝐢𝐝𝐝𝐞𝐧 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚛𝚘𝚖 𝚊 𝚃𝚎𝚡𝚝 𝚏𝚒𝚕𝚎.🎓✨\n\n**𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :** 𝐌𝐞𝐧𝐝𝐚𝐱™❤️\n")
   
