@@ -108,7 +108,7 @@ async def account_login(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name**\n**Ex : **𝐌𝐞𝐧𝐝𝐚𝐱™❤️")
+    await editable.edit("**Enter Your Name**\n**Ex : **`𝐌𝐞𝐧𝐝𝐚𝐱™❤️`")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -186,7 +186,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1002103286911)
+                        await copy.copy(chat_id = --1002054601495)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -200,7 +200,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id,document=f'{name}.pdf', caption=cc1)
-                        await copy.copy(chat_id = -1002103286911)
+                        await copy.copy(chat_id = --1002054601495)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
