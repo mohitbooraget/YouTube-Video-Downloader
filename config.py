@@ -10,5 +10,5 @@ PASS_DB = int(os.environ.get("PASS_DB", "721"))
 
 OWNER = int(os.environ.get("OWNER", 6594402123))
 
-LOG = -1002058009364
+LOG = -1002054601495
 
