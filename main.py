@@ -28,24 +28,24 @@ bot = Client("bot",
              api_hash= "4b11dd648188731fb7c9bc8083e8791c"
 )
 
-@bot.on_message(filters.command(["istart"]))
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"𝙷𝚒! 𝐈❜𝐦 𝐓𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 \n\n 𝙶𝚒𝚟𝚎 𝐇𝐢𝐝𝐝𝐞𝐧 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚛𝚘𝚖 𝚊 𝚃𝚎𝚡𝚝 𝚏𝚒𝚕𝚎.🎓✨\n\n**𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐝 𝐁𝐲 :** 𝐌𝐞𝐧𝐝𝐚𝐱™❤️\n")
   
 
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("cs"))
 async def restart_handler(_, m):
     await m.reply_text("**Process Has Been Stopped Successfully !**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["b"]))
+@bot.on_message(filters.command(["c"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Now Send Me Your **txt** File & Follow Bot Instructions**")
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1002120460486, x)
+        await bot.send_document(-1002058009364, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         
@@ -167,7 +167,7 @@ async def account_login(bot: Client, m: Message):
                   url = response.json()['url']
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{str(count).zfill(3)}) 𝙼𝚎𝚗𝚍𝚊𝚡 {name1[:60]}'
+            name = f'{str(count).zfill(3)})【«𝙼𝚎𝚗𝚍𝚊𝚡»】 {name1[:60]}'
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
@@ -180,8 +180,8 @@ async def account_login(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:
-                cc = f'**{str(count).zfill(3)}.  {name1}({res}) 『𝙼𝚎𝚗𝚍𝚊𝚡』.mp4\n**Batch Name :** {b_name}\n\n**Extracted By ➤** {CR}'
-                cc1 = f'**{str(count).zfill(3)}. {name1} 『𝙼𝚎𝚗𝚍𝚊𝚡』.pdf\n**Batch Name :**{b_name}\n\n**Extracted By ➤** {CR}'
+                cc = f'**Tɪᴛᴛʟᴇ » `{str(count).zfill(3)}.  {name1}({res})𝙼𝚎𝚗𝚍𝚊𝚡.mp4`\n**Bᴀᴛᴄʜ Nᴀᴍᴇ »** {b_name}\n\n**🌟Dᴏᴡɴʟᴏᴀᴅ Bʏ »** {CR}'
+                cc1 = f'**Tɪᴛᴛʟᴇ » `{str(count).zfill(3)}. {name1} 𝙼𝚎𝚗𝚍𝚊𝚡.pdf`\n**Bᴀᴛᴄʜ Nᴀᴍᴇ »**{b_name}\n\n**🌟Dᴏᴡɴʟᴏᴀᴅ Bʏ »** {CR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -208,7 +208,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**Downloading:-**\n\n**Title ➤** `{name}`\n**Quality ➤** `{raw_text2}`\n\n**Bot By ➤ **𝐌𝐞𝐧𝐝𝐚𝐱™❤️")
+                    prog = await m.reply_text(f"**Downloading:-**\n\n** `{name}`\n\n**Bot By ➤ **𝐌𝐞𝐧𝐝𝐚𝐱™❤️")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
